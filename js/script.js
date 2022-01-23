@@ -62,6 +62,7 @@ let a = document.querySelector('.stopwatch__seconds');
 let b = document.querySelector('.stopwatch__minutes');
 let c = document.querySelector('.stopwatch__hours');
 let timer;
+let rar = document.querySelector('.tabsLink__span')
 
 let but = document.querySelector('.stopwatch__btn');
 but.addEventListener('click',function(){
@@ -82,6 +83,7 @@ but.addEventListener('click',function(){
         ma();
     }
 }
+rar.classList.add('active');
 but.innerHTML = 'stop';
 but.classList.add('active');
 ma();
@@ -89,13 +91,14 @@ ma();
         clearTimeout(timer);        
         but.innerHTML = 'clear';
         but.classList.add('active');
-        
+        rar.classList.add('active_clear')
         
     }else if(but.innerHTML == 'clear'){
         a.innerHTML = 0;
         b.innerHTML = 0;
         c.innerHTML = 0;
-
+        rar.classList.remove('active')
+        rar.classList.remove('active_clear')
 
         but.innerHTML = 'start'
         but.classList.add('active')
