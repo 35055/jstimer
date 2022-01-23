@@ -71,7 +71,7 @@ but.addEventListener('click',function(){
     console.log(a.innerHTML);
     if(a.innerHTML < 59 || a.innerHTML == -1){
         a.innerHTML++;
-        timer = setTimeout(() => ma(),10);
+        timer = setTimeout(() => ma(),1000);
         
     }else if( a.innerHTML == 59 && b.innerHTML < 59 || b.innerHTML == -1){
         a.innerHTML = -1;
