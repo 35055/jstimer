@@ -67,6 +67,7 @@ let rar = document.querySelector('.tabsLink__span')
 let but = document.querySelector('.stopwatch__btn');
 but.addEventListener('click',function(){
     if(but.innerHTML == 'start'){
+        a.innerHTML = -1;
         function ma(){
     console.log(a.innerHTML);
     if(a.innerHTML < 59 || a.innerHTML == -1){
